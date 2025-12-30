@@ -1,0 +1,267 @@
+/* Estilos generales */
+html {
+    scroll-behavior: smooth; /*para que al hacer click en el índice del currículum vaya suave*/
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("assets/img/fondo.jpg");
+    background-size: cover;      /* que cubra toda la pantalla */
+    background-repeat: no-repeat; /* que no se repita */
+    background-attachment: fixed; /* efecto parallax (opcional) */
+    background-position: center;  /* centrada */
+    display: flex; /*junto con "flex-direction: column" y "min-height: 100vh"*/
+    flex-direction: column; /*Estas tres permiten que el footer vaya hasta abajo en páginas cortas*/
+    min-height: 100vh; /*también el "margin-top: auto;"del footer ayuda a que se mantenga abajo el footer*/
+}
+
+/* Barra de menú transversal */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+nav.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+nav.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Enlaces globales */
+a {
+    color: cyan;                 /* color inicial */
+    text-decoration: underline;    /* siempre subrayado */
+}
+
+a:visited {
+    color: #d29cff;              /* lila claro */
+}
+
+a:hover {
+    color: #7ffeff;              /* cyan más claro al pasar el ratón */
+}
+
+a:active {
+    color: #ffb3ff;              /* color al hacer clic */
+}
+
+/* Títulos */
+.titol-home {
+    font-size: 1.8rem;
+    color: white;
+    margin-top: 10px;
+}
+
+.titol-principal {
+    font-size: 1.8rem;
+    color: white;
+    margin-top: 20px;
+}
+
+.titol-seccio {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 15px;
+}
+
+.titol-apartat {
+    font-size: 1.3rem;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Contenedores principales */
+.contacte-container {
+    background-color: #333;  /* fondo antracita */
+    box-shadow: 0 0 15px 5px darkslategray;
+    border-radius: 12px;     /* esquinas redondeadas */
+    padding: 15px;
+    max-width: 900px;        /* ancho máximo */
+    margin: 2rem auto;       /* centrar */
+    overflow: hidden;        /* oculto si sale de la tarjeta */
+}
+
+.cv-container {
+    background-color: #333;  /* fondo antracita */
+    box-shadow: 0 0 15px 5px darkslategray;
+    border-radius: 12px;     /* esquinas redondeadas */
+    padding: 15px;
+    max-width: 900px;        /* ancho máximo */
+    margin: 2rem auto;       /* centrar */
+    overflow: hidden;        /* oculto si sale de la tarjeta */
+}
+
+.home-container {
+    background-color: #333;  /* fondo antracita */
+    box-shadow: 0 0 15px 5px darkslategray;
+    border-radius: 12px;     /* esquinas redondeadas */
+    max-width: 900px;        /* ancho máximo */
+    margin: 2rem auto;       /* centrar */
+    overflow: hidden;        /* oculto si sale de la tarjeta */
+}
+
+.home-container p , .home-container h1 {
+    padding: 2rem;           /* espaciado interno */
+    color: white;
+}
+
+/* Mi perfil */
+.destacat {
+    display: flex;
+    flex-direction: column; /* mobile first */
+    align-items: center;
+    gap: 15px;
+}
+
+.destacat img {
+    width: 300px;
+    height: auto;
+}
+
+.text-destacat {
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Mis proyectos */
+.proyectos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.proyecto {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    width: 300px;
+    box-shadow: 0 0 15px 5px darkslategray;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.proyecto p {
+    padding: 20px;
+    flex-grow: 1; /* botones alineados */
+}
+
+.proyecto a {
+    margin: 20px;
+    align-self: flex-start;
+}
+
+/* Secciones CV */
+.cv-section {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cv-section-dades img {
+    vertical-align: middle;  /* Alinea la imagen con el medio del texto */
+}
+
+/* Formularios */
+.formulari label {
+    display: block;
+    margin-top: 10px;
+}
+
+.formulari input, .formulari textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.formulari button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #CC5500;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.formulari button:hover {
+    background-color: rgb(167, 151, 34);
+}
+
+.checkbox-group {
+    display: flex;           
+    align-items: center;
+    gap: 0.5rem;             /* espacio entre checkbox y label */
+    margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 15px;             /* ajustar tamaño checkbox */
+    height: 15px;            /* ajustar tamaño checkbox */
+}
+
+/* Tablas */
+.taula-idiomes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.taula-idiomes th, .taula-idiomes td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /*para que el footer vaya hasta abajo del todo*/
+}
+
+/* MEDIA QUERIES (Responsive) */
+
+/* >= 600px: móvil grande */
+@media (min-width: 600px) {
+    .titol-principal { font-size: 2rem; }
+}
+
+/* >= 768px: tablet vertical */
+@media (min-width: 768px) {
+    .destacat {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .text-destacat {
+        text-align: left;
+    }
+}
+
+/* >= 992px: tablet horizontal */
+@media (min-width: 992px) {
+    .cv-container, .contacte-container {
+        padding: 25px 50px;
+    }
+}
+
+/* >= 1200px: escritorio */
+@media (min-width: 1200px) {
+    .titol-principal { font-size: 2.5rem; }
+    .cv-section-dades, .cv-section-idiomes, .cv-section-estudis, .cv-section-laboral { padding: 20px 0; }
+}
